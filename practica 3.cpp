@@ -37,4 +37,20 @@ int main()
 			j = numeros;
 	}
 	cout << " El mayor numero es:" << j << endl;
+	//Programa que pida 10 números, calcule su media y luego muestre los que están por encima de la media.
+	int i = 0, arrayseed[10],suma=0;
+		for (i = 0; i < size(arrayseed); i++)
+		{
+			cout << "Llene el espacio " << i + 1 << " del segundo array: ";
+			cin >> arrayseed[i];
+			suma = arrayseed[i] + suma;
+		}
+		cout << "La media es: " << suma / (size(arrayseed)) << endl << "Los numero arriba de la media son los siguientes:" << endl;
+		for (i = 0; i < size(arrayseed); i++)
+		{
+			if (arrayseed[i] > (suma / size(arrayseed)))
+			{	
+				cout << arrayseed[i] << " ";
+			}
+		}
 }
